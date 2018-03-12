@@ -9,12 +9,25 @@
 /* Begin PBXBuildFile section */
 		46AA668D442F5FBEE9628BEF /* Pods_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69FF400EDFE88E92D2073131 /* Pods_app.framework */; };
 		CE556F6B205187A8008F2CD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE556F6A205187A8008F2CD4 /* AppDelegate.swift */; };
-		CE556F6D205187A8008F2CD4 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE556F6C205187A8008F2CD4 /* FirstViewController.swift */; };
-		CE556F6F205187A8008F2CD4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE556F6E205187A8008F2CD4 /* SecondViewController.swift */; };
+		CE556F6D205187A8008F2CD4 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE556F6C205187A8008F2CD4 /* ShopViewController.swift */; };
+		CE556F6F205187A8008F2CD4 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE556F6E205187A8008F2CD4 /* OrderViewController.swift */; };
 		CE556F72205187A8008F2CD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE556F70205187A8008F2CD4 /* Main.storyboard */; };
 		CE556F74205187A8008F2CD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE556F73205187A8008F2CD4 /* Assets.xcassets */; };
 		CE556F77205187A8008F2CD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE556F75205187A8008F2CD4 /* LaunchScreen.storyboard */; };
 		CE556F8220519271008F2CD4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE556F8120519271008F2CD4 /* GoogleService-Info.plist */; };
+		CE5F65E120567EA800BCE8B2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F65E020567EA800BCE8B2 /* SearchViewController.swift */; };
+		CE5F65E320567EC300BCE8B2 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F65E220567EC300BCE8B2 /* UserViewController.swift */; };
+		CE5F65E520567ED700BCE8B2 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F65E420567ED700BCE8B2 /* ChatViewController.swift */; };
+		CE5F65EF20568BC200BCE8B2 /* SearchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F65ED20568BC200BCE8B2 /* SearchViewCell.swift */; };
+		CE5F65F020568BC200BCE8B2 /* SearchViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5F65EE20568BC200BCE8B2 /* SearchViewCell.xib */; };
+		CE5F65F220568E5100BCE8B2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F65F120568E5100BCE8B2 /* Constants.swift */; };
+		CE5F65F4205694AA00BCE8B2 /* Cloth.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F65F3205694AA00BCE8B2 /* Cloth.swift */; };
+		CE5F65F62056B32E00BCE8B2 /* ClothViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F65F52056B32E00BCE8B2 /* ClothViewController.swift */; };
+		CE66D70220527E3A00CE29D3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66D70120527E3A00CE29D3 /* MainViewController.swift */; };
+		CE66D7042052838900CE29D3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66D7032052838900CE29D3 /* LoginViewController.swift */; };
+		CE66D7062052855800CE29D3 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66D7052052855800CE29D3 /* CreateAccountViewController.swift */; };
+		CE66D7082052A8D800CE29D3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66D7072052A8D800CE29D3 /* User.swift */; };
+		CE66D70B2052B0D400CE29D3 /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66D70A2052B0D400CE29D3 /* UserServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,13 +36,26 @@
 		89EE724E0212FD4B12A2175C /* Pods-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-app/Pods-app.release.xcconfig"; sourceTree = "<group>"; };
 		CE556F67205187A8008F2CD4 /* app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE556F6A205187A8008F2CD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE556F6C205187A8008F2CD4 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		CE556F6E205187A8008F2CD4 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		CE556F6C205187A8008F2CD4 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		CE556F6E205187A8008F2CD4 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		CE556F71205187A8008F2CD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE556F73205187A8008F2CD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE556F76205187A8008F2CD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE556F78205187A8008F2CD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE556F8120519271008F2CD4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CE5F65E020567EA800BCE8B2 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		CE5F65E220567EC300BCE8B2 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		CE5F65E420567ED700BCE8B2 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		CE5F65ED20568BC200BCE8B2 /* SearchViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewCell.swift; sourceTree = "<group>"; };
+		CE5F65EE20568BC200BCE8B2 /* SearchViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewCell.xib; sourceTree = "<group>"; };
+		CE5F65F120568E5100BCE8B2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CE5F65F3205694AA00BCE8B2 /* Cloth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloth.swift; sourceTree = "<group>"; };
+		CE5F65F52056B32E00BCE8B2 /* ClothViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothViewController.swift; sourceTree = "<group>"; };
+		CE66D70120527E3A00CE29D3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CE66D7032052838900CE29D3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CE66D7052052855800CE29D3 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		CE66D7072052A8D800CE29D3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CE66D70A2052B0D400CE29D3 /* UserServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +99,7 @@
 		CE556F69205187A8008F2CD4 /* app */ = {
 			isa = PBXGroup;
 			children = (
+				CE66D7092052B0B300CE29D3 /* Utilities */,
 				CE556F8020519171008F2CD4 /* View */,
 				CE556F7F20519164008F2CD4 /* Controller */,
 				CE556F7E20519154008F2CD4 /* Model */,
@@ -87,6 +114,8 @@
 		CE556F7E20519154008F2CD4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CE66D7072052A8D800CE29D3 /* User.swift */,
+				CE5F65F3205694AA00BCE8B2 /* Cloth.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -95,8 +124,15 @@
 			isa = PBXGroup;
 			children = (
 				CE556F6A205187A8008F2CD4 /* AppDelegate.swift */,
-				CE556F6E205187A8008F2CD4 /* SecondViewController.swift */,
-				CE556F6C205187A8008F2CD4 /* FirstViewController.swift */,
+				CE556F6E205187A8008F2CD4 /* OrderViewController.swift */,
+				CE556F6C205187A8008F2CD4 /* ShopViewController.swift */,
+				CE66D70120527E3A00CE29D3 /* MainViewController.swift */,
+				CE66D7032052838900CE29D3 /* LoginViewController.swift */,
+				CE66D7052052855800CE29D3 /* CreateAccountViewController.swift */,
+				CE5F65E020567EA800BCE8B2 /* SearchViewController.swift */,
+				CE5F65E220567EC300BCE8B2 /* UserViewController.swift */,
+				CE5F65E420567ED700BCE8B2 /* ChatViewController.swift */,
+				CE5F65F52056B32E00BCE8B2 /* ClothViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -104,9 +140,28 @@
 		CE556F8020519171008F2CD4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CE5F65E6205683E200BCE8B2 /* searchCell */,
 				CE556F70205187A8008F2CD4 /* Main.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		CE5F65E6205683E200BCE8B2 /* searchCell */ = {
+			isa = PBXGroup;
+			children = (
+				CE5F65ED20568BC200BCE8B2 /* SearchViewCell.swift */,
+				CE5F65EE20568BC200BCE8B2 /* SearchViewCell.xib */,
+			);
+			path = searchCell;
+			sourceTree = "<group>";
+		};
+		CE66D7092052B0B300CE29D3 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CE66D70A2052B0D400CE29D3 /* UserServices.swift */,
+				CE5F65F120568E5100BCE8B2 /* Constants.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		ED1CE739AF6DE7F683F551C3 /* Pods */ = {
@@ -180,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE5F65F020568BC200BCE8B2 /* SearchViewCell.xib in Resources */,
 				CE556F77205187A8008F2CD4 /* LaunchScreen.storyboard in Resources */,
 				CE556F8220519271008F2CD4 /* GoogleService-Info.plist in Resources */,
 				CE556F74205187A8008F2CD4 /* Assets.xcassets in Resources */,
@@ -214,9 +270,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-app/Pods-app-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -230,17 +289,25 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-app/Pods-app-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -256,9 +323,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE556F6F205187A8008F2CD4 /* SecondViewController.swift in Sources */,
+				CE5F65F4205694AA00BCE8B2 /* Cloth.swift in Sources */,
+				CE66D70B2052B0D400CE29D3 /* UserServices.swift in Sources */,
+				CE5F65E320567EC300BCE8B2 /* UserViewController.swift in Sources */,
+				CE5F65EF20568BC200BCE8B2 /* SearchViewCell.swift in Sources */,
+				CE5F65E520567ED700BCE8B2 /* ChatViewController.swift in Sources */,
+				CE66D7062052855800CE29D3 /* CreateAccountViewController.swift in Sources */,
+				CE556F6F205187A8008F2CD4 /* OrderViewController.swift in Sources */,
+				CE5F65E120567EA800BCE8B2 /* SearchViewController.swift in Sources */,
 				CE556F6B205187A8008F2CD4 /* AppDelegate.swift in Sources */,
-				CE556F6D205187A8008F2CD4 /* FirstViewController.swift in Sources */,
+				CE556F6D205187A8008F2CD4 /* ShopViewController.swift in Sources */,
+				CE66D7042052838900CE29D3 /* LoginViewController.swift in Sources */,
+				CE5F65F62056B32E00BCE8B2 /* ClothViewController.swift in Sources */,
+				CE5F65F220568E5100BCE8B2 /* Constants.swift in Sources */,
+				CE66D70220527E3A00CE29D3 /* MainViewController.swift in Sources */,
+				CE66D7082052A8D800CE29D3 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
