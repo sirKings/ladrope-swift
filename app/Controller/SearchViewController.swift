@@ -10,8 +10,9 @@ import UIKit
 import Firebase
 import Kingfisher
 import SVProgressHUD
+import CodableFirebase
 
-class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating {
+class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     var clothList = [Cloth]()
     var tempClothList = [Cloth]()
@@ -25,6 +26,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         searchClothList.delegate = self
         searchClothList.dataSource = self
         searchClothList.separatorStyle = .none
+        searchBar.delegate = self
         
         searchClothList.register(UINib(nibName: "SearchViewCell", bundle: nil), forCellReuseIdentifier: "searchViewCell")
         
@@ -43,20 +45,22 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = searchClothList.dequeueReusableCell(withIdentifier: "searchViewCell", for: indexPath) as! SearchViewCell
-        let url = URL(string: clothList[indexPath.row].image1!)
+        let url = URL(string: clothList[indexPath.row].image1)
         cell.searchClothImage.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "ladAccount"), options: nil, progressBlock:nil, completionHandler: nil)
-        cell.searchClothName.text = clothList[indexPath.row].name!.capitalized
-        cell.searchClothLabel.text = clothList[indexPath.row].label!.capitalized
+        cell.searchClothName.text = clothList[indexPath.row].name.capitalized
+        cell.searchClothLabel.text = clothList[indexPath.row].label.capitalized
         
         return cell
     }
     
-    func updateSearchResults(for searchController: UISearchController) {
-        if searchController.searchBar.text == ""{
-            
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText == ""{
+            clothList = tempClothList
+            searchClothList.reloadData()
         }else{
             clothList.removeAll()
-            clothList = tempClothList.filter { ($0.name?.lowercased().contains(searchController.searchBar.text!.lowercased()))! }
+            clothList = tempClothList.filter { ($0.name.lowercased().contains(searchText.lowercased())) }
+            searchClothList.reloadData()
         }
     }
     
@@ -68,8 +72,18 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         performSegue(withIdentifier: "goToClothFromSearchView", sender: indexPath)
     }
     
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        self.searchBar.showsCancelButton = true
+    }
     
-
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = false
+        searchBar.text = ""
+        searchBar.resignFirstResponder()
+        clothList = tempClothList
+        searchClothList.reloadData()
+    }
+    
     /*
     // MARK: - Navigation
  
@@ -92,21 +106,18 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         clothRef.observe(.childAdded){
             snapshot in
             
-            let snapVal = snapshot.value as! Dictionary<String,Any?>
-            let name = snapVal["name"]! as! String
-            let label = snapVal["label"]! as! String
-            let image = snapVal["image1"]! as! String
-            let key = snapVal["clothKey"]! as! String
+            guard let value = snapshot.value else { return }
+            do {
+                let cloth = try FirebaseDecoder().decode(Cloth.self, from: value)
+                //print(cloth)
+                self.clothList.append(cloth)
+                self.tempClothList.append(cloth)
+                SVProgressHUD.dismiss()
+                self.searchClothList.reloadData()
+            } catch let error {
+                print(error)
+            }
             
-            let cloth = Cloth()
-            cloth.name = name
-            cloth.label = label
-            cloth.clothKey = key
-            cloth.image1 = image
-            self.clothList.append(cloth)
-            self.tempClothList.append(cloth)
-            SVProgressHUD.dismiss()
-            self.searchClothList.reloadData()
             
         }
     }

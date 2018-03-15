@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import GoogleSignIn
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
@@ -23,8 +24,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         FirebaseApp.configure()
         
         //setup firebase
-        GIDSignIn.sharedInstance().clientID = "205152875857-ehofb33cvmdfppa8huh3si3nf4qvt7aj.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         //GIDSignIn.sharedInstance().delegate = self
+        
+        IQKeyboardManager.sharedManager().enable = true
         
         //configure tab bar
         UITabBar.appearance().tintColor = UIColor( red: CGFloat(0), green: CGFloat(74/255.0), blue: CGFloat(0), alpha: CGFloat(1.0) )

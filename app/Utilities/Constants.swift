@@ -7,3 +7,4 @@
 //
 
 var GENDER = "male"
+let COMMENT_REPORT_URL = "https://ladrope.com/comment"

@@ -7,34 +7,34 @@
 //
 import Foundation
 
-class Cloth {
-    var name: String?
-    var clothKey: String?
-    var cost: Any?
-    var gender: String?
-    var image1: String?
-    var image2: String?
-    var image3: String?
-    var image4: String?
-    var label: String?
-    var labelEmail: String?
-    var labelId: String?
-    var labelPhone: String?
-    var likes: Int?
-    var numComment: Int?
-    var numSold: Int?
-    var price: Int?
-    var rating: Double?
-    var tags: String?
-    var tailorKey: String?
-    var time: Any?
-    var fabricType: String?
-    var description: String?
-    var options: Any?
+struct Cloth: Codable {
+    let name: String
+    let clothKey: String
+    //let cost: Any
+    let gender: String
+    let image1: String
+    let image2: String
+    let image3: String
+    let image4: String
+    let label: String
+    let labelEmail: String
+    let labelId: String
+    let labelPhone: String
+    let likes: Int
+    let numComment: Int
+    let numSold: Int
+    let price: Int
+    let rating: Double
+    let tags: String
+    let tailorKey: String
+    let time: Int
+    let fabricType: String
+    let description: String
+    //let options: Any
     var cartKey: String?
-    var selectedOption: Any?
-    var liked: Bool = false
-    var likers: Dictionary<String, Bool>?
+    var selectedOption: [Dictionary<String, String?>]?
+    var liked: Bool? = false
+    let likers: Dictionary<String, Bool>
     
     
 //    init(name: String?, clothKey: String?, cost: String?, gender: String?, image1: String?,

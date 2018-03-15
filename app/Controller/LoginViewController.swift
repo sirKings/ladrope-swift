@@ -193,7 +193,11 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
                 return
             }
             // User is signed in
-            let myUser = MyUser(displayName: user?.displayName, email: user?.email, photoURL: String(describing: user?.photoURL), address: nil, coupons: nil, gender: "male", height: nil, phone: nil, size: nil)
+            var myUser = MyUser()
+            myUser.email = user!.email
+            myUser.displayName = user!.displayName
+            myUser.gender = "male"
+            myUser.photoURL = String(describing: user?.photoURL)
             saveUser(user: myUser, uid: user!.uid)
             SVProgressHUD.dismiss()
             self.performSegue(withIdentifier: "goHomeFromCreateAccount", sender: self)

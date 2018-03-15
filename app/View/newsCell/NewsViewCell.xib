@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="297" id="KGk-i7-Jjw" customClass="NewsViewCell" customModule="app" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="298" height="297"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="298" height="296.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BWd-KN-kv7">
+                        <rect key="frame" x="0.0" y="0.0" width="298" height="235"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="235" id="UAJ-yW-iLS"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FAQ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZlC-oH-OXT">
+                        <rect key="frame" x="9" y="237" width="34" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCW-cC-57T">
+                        <rect key="frame" x="216" y="266" width="66" height="30"/>
+                        <state key="normal" title="See more">
+                            <color key="titleColor" red="0.0" green="0.2901960784" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="seeMorePressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="2HE-Vh-geL"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Got questions?, everything you need to know about ladrope" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3p8-hF-nd7">
+                        <rect key="frame" x="8" y="258" width="274" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="BWd-KN-kv7" secondAttribute="trailing" id="AXu-X9-dex"/>
+                    <constraint firstItem="BWd-KN-kv7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="EgA-uY-uWZ"/>
+                    <constraint firstItem="ZlC-oH-OXT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="9" id="GH0-Nc-TzU"/>
+                    <constraint firstItem="3p8-hF-nd7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="VtJ-h5-N4x"/>
+                    <constraint firstItem="ZlC-oH-OXT" firstAttribute="top" secondItem="BWd-KN-kv7" secondAttribute="bottom" constant="2" id="YKT-g0-nZ0"/>
+                    <constraint firstAttribute="trailing" secondItem="pCW-cC-57T" secondAttribute="trailing" constant="16" id="djh-sp-WeV"/>
+                    <constraint firstItem="BWd-KN-kv7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="fvA-1v-uJE"/>
+                    <constraint firstItem="3p8-hF-nd7" firstAttribute="top" secondItem="ZlC-oH-OXT" secondAttribute="bottom" id="kOE-3c-Jt6"/>
+                    <constraint firstAttribute="bottom" secondItem="pCW-cC-57T" secondAttribute="bottom" constant="0.5" id="ppm-6O-fRC"/>
+                    <constraint firstAttribute="trailing" secondItem="3p8-hF-nd7" secondAttribute="trailing" constant="16" id="qWu-vD-Xe7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="newsDescription" destination="3p8-hF-nd7" id="Slr-te-toJ"/>
+                <outlet property="newsImage" destination="BWd-KN-kv7" id="MvS-eA-g2E"/>
+                <outlet property="newsTitle" destination="ZlC-oH-OXT" id="Fk2-CF-GuD"/>
+            </connections>
+            <point key="canvasLocation" x="23" y="-58.5"/>
+        </tableViewCell>
+    </objects>
+</document>

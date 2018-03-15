@@ -28,6 +28,23 @@
 		CE66D7062052855800CE29D3 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66D7052052855800CE29D3 /* CreateAccountViewController.swift */; };
 		CE66D7082052A8D800CE29D3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66D7072052A8D800CE29D3 /* User.swift */; };
 		CE66D70B2052B0D400CE29D3 /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66D70A2052B0D400CE29D3 /* UserServices.swift */; };
+		CE68B26B2057DCFE00FF47CE /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE68B26A2057DCFE00FF47CE /* ImageCollectionViewCell.swift */; };
+		CE68B26D2058160F00FF47CE /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE68B26C2058160F00FF47CE /* CommentViewController.swift */; };
+		CE68B27120581BC900FF47CE /* CommentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE68B26F20581BC900FF47CE /* CommentViewCell.swift */; };
+		CE68B27220581BC900FF47CE /* CommentViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE68B27020581BC900FF47CE /* CommentViewCell.xib */; };
+		CE68B27420581F6E00FF47CE /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE68B27320581F6E00FF47CE /* Comment.swift */; };
+		CE68B2782059224A00FF47CE /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE68B2772059224A00FF47CE /* OptionsViewController.swift */; };
+		CE68B27C2059237F00FF47CE /* OptionsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE68B27A2059237F00FF47CE /* OptionsViewCell.swift */; };
+		CE68B27D2059237F00FF47CE /* OptionsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE68B27B2059237F00FF47CE /* OptionsViewCell.xib */; };
+		CE68B27F205926D200FF47CE /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE68B27E205926D200FF47CE /* Option.swift */; };
+		CE68B283205940F400FF47CE /* ShopViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE68B281205940F400FF47CE /* ShopViewCell.swift */; };
+		CE68B284205940F400FF47CE /* ShopViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE68B282205940F400FF47CE /* ShopViewCell.xib */; };
+		CE68B2882059530000FF47CE /* NewsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE68B2862059530000FF47CE /* NewsViewCell.swift */; };
+		CE68B2892059530000FF47CE /* NewsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE68B2872059530000FF47CE /* NewsViewCell.xib */; };
+		CEFE5076205AB1D400530B1C /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE5075205AB1D400530B1C /* CartViewController.swift */; };
+		CEFE507A205AB33000530B1C /* CartViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE5078205AB33000530B1C /* CartViewCell.swift */; };
+		CEFE507B205AB33000530B1C /* CartViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEFE5079205AB33000530B1C /* CartViewCell.xib */; };
+		CEFE507D205ADC2F00530B1C /* EditUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE507C205ADC2F00530B1C /* EditUserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +73,23 @@
 		CE66D7052052855800CE29D3 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		CE66D7072052A8D800CE29D3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CE66D70A2052B0D400CE29D3 /* UserServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServices.swift; sourceTree = "<group>"; };
+		CE68B26A2057DCFE00FF47CE /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		CE68B26C2058160F00FF47CE /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		CE68B26F20581BC900FF47CE /* CommentViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewCell.swift; sourceTree = "<group>"; };
+		CE68B27020581BC900FF47CE /* CommentViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentViewCell.xib; sourceTree = "<group>"; };
+		CE68B27320581F6E00FF47CE /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		CE68B2772059224A00FF47CE /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
+		CE68B27A2059237F00FF47CE /* OptionsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewCell.swift; sourceTree = "<group>"; };
+		CE68B27B2059237F00FF47CE /* OptionsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionsViewCell.xib; sourceTree = "<group>"; };
+		CE68B27E205926D200FF47CE /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
+		CE68B281205940F400FF47CE /* ShopViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewCell.swift; sourceTree = "<group>"; };
+		CE68B282205940F400FF47CE /* ShopViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopViewCell.xib; sourceTree = "<group>"; };
+		CE68B2862059530000FF47CE /* NewsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewCell.swift; sourceTree = "<group>"; };
+		CE68B2872059530000FF47CE /* NewsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsViewCell.xib; sourceTree = "<group>"; };
+		CEFE5075205AB1D400530B1C /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		CEFE5078205AB33000530B1C /* CartViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewCell.swift; sourceTree = "<group>"; };
+		CEFE5079205AB33000530B1C /* CartViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartViewCell.xib; sourceTree = "<group>"; };
+		CEFE507C205ADC2F00530B1C /* EditUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +150,8 @@
 			children = (
 				CE66D7072052A8D800CE29D3 /* User.swift */,
 				CE5F65F3205694AA00BCE8B2 /* Cloth.swift */,
+				CE68B27320581F6E00FF47CE /* Comment.swift */,
+				CE68B27E205926D200FF47CE /* Option.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -133,6 +169,11 @@
 				CE5F65E220567EC300BCE8B2 /* UserViewController.swift */,
 				CE5F65E420567ED700BCE8B2 /* ChatViewController.swift */,
 				CE5F65F52056B32E00BCE8B2 /* ClothViewController.swift */,
+				CE68B26A2057DCFE00FF47CE /* ImageCollectionViewCell.swift */,
+				CE68B26C2058160F00FF47CE /* CommentViewController.swift */,
+				CE68B2772059224A00FF47CE /* OptionsViewController.swift */,
+				CEFE5075205AB1D400530B1C /* CartViewController.swift */,
+				CEFE507C205ADC2F00530B1C /* EditUserViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -140,6 +181,11 @@
 		CE556F8020519171008F2CD4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CEFE5077205AB30C00530B1C /* cartCell */,
+				CE68B285205952DC00FF47CE /* newsCell */,
+				CE68B280205940CD00FF47CE /* shopCell */,
+				CE68B2792059234C00FF47CE /* optionsCell */,
+				CE68B26E20581B9500FF47CE /* commentCell */,
 				CE5F65E6205683E200BCE8B2 /* searchCell */,
 				CE556F70205187A8008F2CD4 /* Main.storyboard */,
 			);
@@ -162,6 +208,51 @@
 				CE5F65F120568E5100BCE8B2 /* Constants.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		CE68B26E20581B9500FF47CE /* commentCell */ = {
+			isa = PBXGroup;
+			children = (
+				CE68B26F20581BC900FF47CE /* CommentViewCell.swift */,
+				CE68B27020581BC900FF47CE /* CommentViewCell.xib */,
+			);
+			path = commentCell;
+			sourceTree = "<group>";
+		};
+		CE68B2792059234C00FF47CE /* optionsCell */ = {
+			isa = PBXGroup;
+			children = (
+				CE68B27A2059237F00FF47CE /* OptionsViewCell.swift */,
+				CE68B27B2059237F00FF47CE /* OptionsViewCell.xib */,
+			);
+			path = optionsCell;
+			sourceTree = "<group>";
+		};
+		CE68B280205940CD00FF47CE /* shopCell */ = {
+			isa = PBXGroup;
+			children = (
+				CE68B281205940F400FF47CE /* ShopViewCell.swift */,
+				CE68B282205940F400FF47CE /* ShopViewCell.xib */,
+			);
+			path = shopCell;
+			sourceTree = "<group>";
+		};
+		CE68B285205952DC00FF47CE /* newsCell */ = {
+			isa = PBXGroup;
+			children = (
+				CE68B2862059530000FF47CE /* NewsViewCell.swift */,
+				CE68B2872059530000FF47CE /* NewsViewCell.xib */,
+			);
+			path = newsCell;
+			sourceTree = "<group>";
+		};
+		CEFE5077205AB30C00530B1C /* cartCell */ = {
+			isa = PBXGroup;
+			children = (
+				CEFE5078205AB33000530B1C /* CartViewCell.swift */,
+				CEFE5079205AB33000530B1C /* CartViewCell.xib */,
+			);
+			path = cartCell;
 			sourceTree = "<group>";
 		};
 		ED1CE739AF6DE7F683F551C3 /* Pods */ = {
@@ -235,10 +326,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE68B2892059530000FF47CE /* NewsViewCell.xib in Resources */,
 				CE5F65F020568BC200BCE8B2 /* SearchViewCell.xib in Resources */,
+				CE68B27D2059237F00FF47CE /* OptionsViewCell.xib in Resources */,
 				CE556F77205187A8008F2CD4 /* LaunchScreen.storyboard in Resources */,
+				CEFE507B205AB33000530B1C /* CartViewCell.xib in Resources */,
+				CE68B27220581BC900FF47CE /* CommentViewCell.xib in Resources */,
 				CE556F8220519271008F2CD4 /* GoogleService-Info.plist in Resources */,
 				CE556F74205187A8008F2CD4 /* Assets.xcassets in Resources */,
+				CE68B284205940F400FF47CE /* ShopViewCell.xib in Resources */,
 				CE556F72205187A8008F2CD4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,9 +385,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-app/Pods-app-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CodableFirebase/CodableFirebase.framework",
+				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
@@ -301,9 +401,13 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableFirebase.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
@@ -325,17 +429,29 @@
 			files = (
 				CE5F65F4205694AA00BCE8B2 /* Cloth.swift in Sources */,
 				CE66D70B2052B0D400CE29D3 /* UserServices.swift in Sources */,
+				CE68B26B2057DCFE00FF47CE /* ImageCollectionViewCell.swift in Sources */,
 				CE5F65E320567EC300BCE8B2 /* UserViewController.swift in Sources */,
 				CE5F65EF20568BC200BCE8B2 /* SearchViewCell.swift in Sources */,
+				CE68B283205940F400FF47CE /* ShopViewCell.swift in Sources */,
+				CEFE507D205ADC2F00530B1C /* EditUserViewController.swift in Sources */,
+				CE68B26D2058160F00FF47CE /* CommentViewController.swift in Sources */,
+				CEFE5076205AB1D400530B1C /* CartViewController.swift in Sources */,
+				CE68B27120581BC900FF47CE /* CommentViewCell.swift in Sources */,
 				CE5F65E520567ED700BCE8B2 /* ChatViewController.swift in Sources */,
 				CE66D7062052855800CE29D3 /* CreateAccountViewController.swift in Sources */,
+				CE68B2782059224A00FF47CE /* OptionsViewController.swift in Sources */,
 				CE556F6F205187A8008F2CD4 /* OrderViewController.swift in Sources */,
 				CE5F65E120567EA800BCE8B2 /* SearchViewController.swift in Sources */,
+				CEFE507A205AB33000530B1C /* CartViewCell.swift in Sources */,
 				CE556F6B205187A8008F2CD4 /* AppDelegate.swift in Sources */,
 				CE556F6D205187A8008F2CD4 /* ShopViewController.swift in Sources */,
+				CE68B27F205926D200FF47CE /* Option.swift in Sources */,
 				CE66D7042052838900CE29D3 /* LoginViewController.swift in Sources */,
 				CE5F65F62056B32E00BCE8B2 /* ClothViewController.swift in Sources */,
+				CE68B27C2059237F00FF47CE /* OptionsViewCell.swift in Sources */,
 				CE5F65F220568E5100BCE8B2 /* Constants.swift in Sources */,
+				CE68B27420581F6E00FF47CE /* Comment.swift in Sources */,
+				CE68B2882059530000FF47CE /* NewsViewCell.swift in Sources */,
 				CE66D70220527E3A00CE29D3 /* MainViewController.swift in Sources */,
 				CE66D7082052A8D800CE29D3 /* User.swift in Sources */,
 			);

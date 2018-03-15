@@ -8,11 +8,13 @@
 import FirebaseDatabase
 
 func saveUser(user: MyUser, uid: String){
+    let myUser: Dictionary<String, Any> = ["email": user.email!, "displayName": user.displayName!, "gender": user.gender!, "photoURL": user.photoURL ?? "default"]
+    
     let userRef = Database.database().reference().child("users").child(uid)
     userRef.observeSingleEvent(of: .value){
         (snapshot) in
         if snapshot.value != nil {
-            userRef.setValue(user)
+            userRef.setValue(myUser)
         }else{
             print("User exists")
         }
