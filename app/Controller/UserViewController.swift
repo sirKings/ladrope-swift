@@ -28,6 +28,7 @@ class UserViewController: UIViewController {
         
         SVProgressHUD.show()
         getUser()
+        getUserHeight()
         // Do any additional setup after loading the view.
     }
 
@@ -41,6 +42,7 @@ class UserViewController: UIViewController {
     }
     
     @IBAction func MeasurePressed(_ sender: Any) {
+        performSegue(withIdentifier: "goToMeasure", sender: self)
     }
 
      @IBAction func Logout(_ sender: Any) {
@@ -81,6 +83,21 @@ class UserViewController: UIViewController {
             }
             
             SVProgressHUD.dismiss()
+        }
+    }
+    
+    func getUserHeight(){
+        let heightRef = Database.database().reference().child("users").child((Auth.auth().currentUser?.uid)!).child("height")
+        heightRef.observe(.value){
+            snapshot in
+            
+            guard let value = snapshot.value else { return }
+            do {
+                let height = try FirebaseDecoder().decode(Height.self, from: value)
+                self.userHeight.text = "\(height.height!) \(height.unit!)"
+            } catch let error {
+                print(error)
+            }
         }
     }
     
