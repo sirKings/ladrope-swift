@@ -8,7 +8,10 @@
 
 import UIKit
 import AVFoundation
-import RecordButton
+import AVKit
+import Cloudinary
+import Firebase
+import SCLAlertView
 
 class VideoViewController: UIViewController, AVCaptureFileOutputRecordingDelegate {
     
@@ -16,10 +19,18 @@ class VideoViewController: UIViewController, AVCaptureFileOutputRecordingDelegat
     
     @IBOutlet var camPreview: UIView!
     var progressTimer : Timer!
-    var progress : CGFloat! = 0
-    var recordButton : RecordButton!
+    var progress : Int! = 0
     
+    let avPlayer = AVPlayer()
+    var avPlayerLayer: AVPlayerLayer!
+    let config = CLDConfiguration(cloudName: "ladrope", apiKey: "676132983176963")
+    var cloudinary: CLDCloudinary?
     
+
+    
+    @IBOutlet weak var recordButtonText: UIButton!
+    
+    @IBOutlet weak var timerText: UIButton!
     
     let captureSession = AVCaptureSession()
     
@@ -30,6 +41,7 @@ class VideoViewController: UIViewController, AVCaptureFileOutputRecordingDelegat
     var activeInput: AVCaptureDeviceInput!
     
     var outputURL: URL!
+    var videoURL: URL?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,41 +51,49 @@ class VideoViewController: UIViewController, AVCaptureFileOutputRecordingDelegat
             startSession()
         }
         
-        //let recordButton = RecordButton(frame: CGRectMake(0,0,70,70))
-        recordButton = RecordButton(frame: CGRect(x: 0, y: 0, width: 70, height: 70))
-        view.addSubview(recordButton)
+        cloudinary = CLDCloudinary(configuration: config)
         
-        recordButton.addTarget(self, action: #selector(VideoViewController.record), for: .touchDown)
-        recordButton.addTarget(self, action: #selector(VideoViewController.stop), for: UIControlEvents.touchUpInside)
-
-        // Do any additional setup after loading the view.
     }
 
-    
-    @objc func record() {
-         startRecording()
-        self.progressTimer = Timer.scheduledTimer(timeInterval: 0.05, target: self, selector: #selector(VideoViewController.updateProgress), userInfo: nil, repeats: true)
-    }
     
     @objc func updateProgress() {
+
+        //let maxDuration = CGFloat(15) // max duration of the recordButton
+
+        progress = progress + 1
+        if progress < 10 {
+            timerText.setTitle("00:0\(progress!)", for: .normal)
+        }else {
+            timerText.setTitle("00:\(progress!)", for: .normal)
+        }
         
-        let maxDuration = CGFloat(15) // max duration of the recordButton
-        
-        progress = progress + (CGFloat(0.05) / maxDuration)
-        recordButton.setProgress(progress)
-        
-        if progress >= 1 {
+        timerText.setTitleColor(.red, for: .normal)
+        if progress >= 15 {
             progressTimer.invalidate()
             stopRecording()
         }
+
+    }
+
+    @IBAction func RetryPressed(_ sender: Any) {
         
     }
     
-    @objc func stop() {
-        self.progressTimer.invalidate()
-        
+    @IBAction func recordButton(_ sender: Any) {
+        startRecording()
     }
     
+    @IBAction func DonePressed(_ sender: Any) {
+        if videoURL != nil {
+            UploadVideo(url: videoURL!)
+            self.dismiss(animated: true){
+                SCLAlertView().showSuccess("Success", subTitle: "Video submitted")
+            }
+        }else{
+            
+        }
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -174,9 +194,8 @@ class VideoViewController: UIViewController, AVCaptureFileOutputRecordingDelegat
     
     func startCapture() {
         
-       
-        record()
-        
+        self.progressTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(VideoViewController.updateProgress), userInfo: nil, repeats: true)
+
     }
     
     //EDIT 1: I FORGOT THIS AT FIRST
@@ -193,10 +212,12 @@ class VideoViewController: UIViewController, AVCaptureFileOutputRecordingDelegat
     }
     
     
-    func startRecording() {
+    @objc func startRecording() {
         
         if movieOutput.isRecording == false {
             
+            startCapture()
+            recordButtonText.setImage(#imageLiteral(resourceName: "stop"), for: .normal)
             let connection = movieOutput.connection(with: AVMediaType.video)
             if (connection?.isVideoOrientationSupported)! {
                 connection?.videoOrientation = currentVideoOrientation()
@@ -233,6 +254,8 @@ class VideoViewController: UIViewController, AVCaptureFileOutputRecordingDelegat
         
         if movieOutput.isRecording == true {
             movieOutput.stopRecording()
+            recordButtonText.setImage(#imageLiteral(resourceName: "capture"), for: .normal)
+            timerText.setTitleColor(UIColor.init(red: 0, green: 74/255, blue: 0, alpha: 1), for: .normal)
         }
     }
     
@@ -240,33 +263,51 @@ class VideoViewController: UIViewController, AVCaptureFileOutputRecordingDelegat
         
     }
     
-//    func capture(_ captureOutput: AVCaptureFileOutput!, didFinishRecordingToOutputFileAt outputFileURL: URL!, fromConnections connections: [Any]!, error: Error!) {
-//        if (error != nil) {
-//            print("Error recording movie: \(error!.localizedDescription)")
-//        } else {
-//            
-//            _ = outputURL as URL
-//            
-//        }
-//        outputURL = nil
-//    }
-    
     func fileOutput(_ output: AVCaptureFileOutput, didFinishRecordingTo outputFileURL: URL, from connections: [AVCaptureConnection], error: Error?) {
         if (error != nil) {
             print("Error recording movie: \(error!.localizedDescription)")
         } else {
             
-            _ = outputURL as URL
-            print(outputURL)
+            //_ = outputURL as URL
+            
+            outputURL = outputFileURL
+            setUpPlay(videoURL: outputURL)
+            videoURL = outputURL
+            progress! = 0
             
         }
         outputURL = nil
     }
     
 
-
+    func setUpPlay(videoURL: URL){
     
-
+        let player = AVPlayer(url: videoURL)
+        let playerViewController = AVPlayerViewController()
+        playerViewController.player = player
+        self.present(playerViewController, animated: true) {
+            playerViewController.player!.play()
+        }
+    }
+    
+    func UploadVideo(url: URL){
+        print("Upload Url", url)
+        let params = CLDUploadRequestParams().setPublicId((Auth.auth().currentUser?.uid)!).setResourceType("video")
+        //let request = cloudinary.createUploader().upload(file: url, params: params)
+        _ = cloudinary?.createUploader().upload(url: url, uploadPreset: "hsivazse", params: params as? CLDUploadRequestParams, progress: nil) {
+            (res, error) in
+            if error == nil {
+                print(res?.url!)
+                checkAndSubmitPendingOrders()
+            }else{
+                SCLAlertView().showError("Ooops", subTitle: "There was an error submitting your video. Try that again later")
+            }
+        }
+    }
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 

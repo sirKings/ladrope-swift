@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,9 +21,9 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BWd-KN-kv7">
-                        <rect key="frame" x="0.0" y="0.0" width="298" height="235"/>
+                        <rect key="frame" x="5" y="0.0" width="288" height="235"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="235" id="UAJ-yW-iLS"/>
+                            <constraint firstAttribute="height" constant="235" id="WHZ-nr-Xa3"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FAQ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZlC-oH-OXT">
@@ -31,8 +32,14 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Got questions?, everything you need to know about ladrope" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3p8-hF-nd7">
+                        <rect key="frame" x="8" y="258" width="270" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCW-cC-57T">
-                        <rect key="frame" x="216" y="266" width="66" height="30"/>
+                        <rect key="frame" x="216" y="235" width="66" height="30"/>
                         <state key="normal" title="See more">
                             <color key="titleColor" red="0.0" green="0.2901960784" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
@@ -40,24 +47,18 @@
                             <action selector="seeMorePressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="2HE-Vh-geL"/>
                         </connections>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Got questions?, everything you need to know about ladrope" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3p8-hF-nd7">
-                        <rect key="frame" x="8" y="258" width="274" height="16"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="BWd-KN-kv7" secondAttribute="trailing" id="AXu-X9-dex"/>
-                    <constraint firstItem="BWd-KN-kv7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="EgA-uY-uWZ"/>
+                    <constraint firstItem="BWd-KN-kv7" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="1It-eM-mm0"/>
+                    <constraint firstItem="BWd-KN-kv7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-11" id="1KH-yP-rc1"/>
+                    <constraint firstItem="BWd-KN-kv7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="CKy-ad-R0N"/>
                     <constraint firstItem="ZlC-oH-OXT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="9" id="GH0-Nc-TzU"/>
+                    <constraint firstItem="pCW-cC-57T" firstAttribute="top" secondItem="BWd-KN-kv7" secondAttribute="bottom" id="Pdg-ia-TQm"/>
                     <constraint firstItem="3p8-hF-nd7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="VtJ-h5-N4x"/>
-                    <constraint firstItem="ZlC-oH-OXT" firstAttribute="top" secondItem="BWd-KN-kv7" secondAttribute="bottom" constant="2" id="YKT-g0-nZ0"/>
-                    <constraint firstAttribute="trailing" secondItem="pCW-cC-57T" secondAttribute="trailing" constant="16" id="djh-sp-WeV"/>
-                    <constraint firstItem="BWd-KN-kv7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="fvA-1v-uJE"/>
                     <constraint firstItem="3p8-hF-nd7" firstAttribute="top" secondItem="ZlC-oH-OXT" secondAttribute="bottom" id="kOE-3c-Jt6"/>
-                    <constraint firstAttribute="bottom" secondItem="pCW-cC-57T" secondAttribute="bottom" constant="0.5" id="ppm-6O-fRC"/>
-                    <constraint firstAttribute="trailing" secondItem="3p8-hF-nd7" secondAttribute="trailing" constant="16" id="qWu-vD-Xe7"/>
+                    <constraint firstItem="pCW-cC-57T" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="kck-ji-HF1"/>
+                    <constraint firstItem="ZlC-oH-OXT" firstAttribute="top" secondItem="BWd-KN-kv7" secondAttribute="bottom" constant="2" id="pHw-6M-bp9"/>
+                    <constraint firstAttribute="trailing" secondItem="3p8-hF-nd7" secondAttribute="trailing" constant="20" id="qWu-vD-Xe7"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

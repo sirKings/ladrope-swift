@@ -20,3 +20,7 @@ func saveUser(user: MyUser, uid: String){
         }
     }
 }
+
+func checkAndSubmitPendingOrders(){
+    
+}

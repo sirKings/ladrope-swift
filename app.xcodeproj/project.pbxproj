@@ -17,6 +17,8 @@
 		CE315F70205BD97200B17AAF /* SelectTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE315F6F205BD97200B17AAF /* SelectTimeViewController.swift */; };
 		CE315F72205BF32700B17AAF /* TriangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE315F71205BF32700B17AAF /* TriangleView.swift */; };
 		CE315F74205C289D00B17AAF /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE315F73205C289D00B17AAF /* VideoViewController.swift */; };
+		CE41D3A5205D40D80093D077 /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE41D3A4205D40D80093D077 /* NewsItem.swift */; };
+		CE41D3A7205D496F0093D077 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE41D3A6205D496E0093D077 /* WebViewController.swift */; };
 		CE556F6B205187A8008F2CD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE556F6A205187A8008F2CD4 /* AppDelegate.swift */; };
 		CE556F6D205187A8008F2CD4 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE556F6C205187A8008F2CD4 /* ShopViewController.swift */; };
 		CE556F6F205187A8008F2CD4 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE556F6E205187A8008F2CD4 /* OrderViewController.swift */; };
@@ -69,6 +71,8 @@
 		CE315F6F205BD97200B17AAF /* SelectTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTimeViewController.swift; sourceTree = "<group>"; };
 		CE315F71205BF32700B17AAF /* TriangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleView.swift; sourceTree = "<group>"; };
 		CE315F73205C289D00B17AAF /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		CE41D3A4205D40D80093D077 /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
+		CE41D3A6205D496E0093D077 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		CE556F67205187A8008F2CD4 /* app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE556F6A205187A8008F2CD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE556F6C205187A8008F2CD4 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
@@ -172,6 +176,7 @@
 				CE68B27320581F6E00FF47CE /* Comment.swift */,
 				CE68B27E205926D200FF47CE /* Option.swift */,
 				CE315F63205BA3E600B17AAF /* Height.swift */,
+				CE41D3A4205D40D80093D077 /* NewsItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -200,6 +205,7 @@
 				CE315F6D205BBD9700B17AAF /* TipsViewController.swift */,
 				CE315F6F205BD97200B17AAF /* SelectTimeViewController.swift */,
 				CE315F73205C289D00B17AAF /* VideoViewController.swift */,
+				CE41D3A6205D496E0093D077 /* WebViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -414,6 +420,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-app/Pods-app-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Cloudinary/Cloudinary.framework",
 				"${BUILT_PRODUCTS_DIR}/CodableFirebase/CodableFirebase.framework",
 				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
@@ -422,7 +429,6 @@
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/RecordButton/RecordButton.framework",
 				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -431,6 +437,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cloudinary.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableFirebase.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
@@ -439,7 +446,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RecordButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -457,6 +463,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE41D3A7205D496F0093D077 /* WebViewController.swift in Sources */,
 				CE5F65F4205694AA00BCE8B2 /* Cloth.swift in Sources */,
 				CE66D70B2052B0D400CE29D3 /* UserServices.swift in Sources */,
 				CE68B26B2057DCFE00FF47CE /* ImageCollectionViewCell.swift in Sources */,
@@ -482,6 +489,7 @@
 				CE556F6B205187A8008F2CD4 /* AppDelegate.swift in Sources */,
 				CE556F6D205187A8008F2CD4 /* ShopViewController.swift in Sources */,
 				CE68B27F205926D200FF47CE /* Option.swift in Sources */,
+				CE41D3A5205D40D80093D077 /* NewsItem.swift in Sources */,
 				CE66D7042052838900CE29D3 /* LoginViewController.swift in Sources */,
 				CE315F66205BB2AD00B17AAF /* MeasurementViewController.swift in Sources */,
 				CE315F70205BD97200B17AAF /* SelectTimeViewController.swift in Sources */,
