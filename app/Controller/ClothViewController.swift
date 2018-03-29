@@ -70,7 +70,9 @@ class ClothViewController: UIViewController, UICollectionViewDelegate, UICollect
         let dataToShare = [image1.image, "https://ladrope.com/cloth/\(cloth!.clothKey)" ] as [Any]
         
         let activityController = UIActivityViewController(activityItems: dataToShare, applicationActivities: nil)
-        self.present(activityController, animated: true, completion: nil)
+        self.present(activityController, animated: true){
+            updateCoupon()
+        }
     }
     
     @IBAction func Comment(_ sender: UIButton) {

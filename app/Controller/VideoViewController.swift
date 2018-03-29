@@ -298,6 +298,7 @@ class VideoViewController: UIViewController, AVCaptureFileOutputRecordingDelegat
             (res, error) in
             if error == nil {
                 print(res?.url!)
+                Database.database().reference().child("users").child((Auth.auth().currentUser?.uid)!).child("size").setValue(res?.url)
                 checkAndSubmitPendingOrders()
             }else{
                 SCLAlertView().showError("Ooops", subTitle: "There was an error submitting your video. Try that again later")

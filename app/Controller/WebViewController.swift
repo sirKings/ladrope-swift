@@ -7,23 +7,23 @@
 //
 
 import UIKit
-import WebKit
 
-class WebViewController: UIViewController, WKNavigationDelegate {
+class WebViewController: UIViewController {
     
     var link: String?
     
-    @IBOutlet weak var ladWebView: WKWebView!
+    @IBOutlet weak var ladWebView: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        ladWebView.navigationDelegate = self
+        
+        // Disable navigation buttons on first loads
         
         let url = URL(string: link!)
         let request = URLRequest(url: url!)
         
-        ladWebView.load(request)
+        ladWebView.loadRequest(request)
         
     }
 
@@ -32,7 +32,8 @@ class WebViewController: UIViewController, WKNavigationDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-
+  
+    
     /*
     // MARK: - Navigation
 

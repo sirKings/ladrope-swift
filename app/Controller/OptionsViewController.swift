@@ -96,7 +96,7 @@ class OptionsViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction func placeOrder(_ sender: UIButton) {
-        
+        performSegue(withIdentifier: "startPayment", sender: self)
     }
     
     func getOptions(){
@@ -125,8 +125,15 @@ class OptionsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "startPayment" {
+            let PVC = segue.destination as! PaymentViewController
+            PVC.price = cloth!.price
+            cloth?.selectedOption = selectedOptions
+            var cloths = [Cloth]()
+            cloths.append(cloth!)
+            PVC.cloths = cloths
+            PVC.sender = false
+        }
     }
     
     func checkForOptions() {

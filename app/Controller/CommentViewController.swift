@@ -67,6 +67,8 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
         return commentCell
     }
     
+    
+    
     @objc func tableViewTapped() {
         commentText.endEditing(true)
     }

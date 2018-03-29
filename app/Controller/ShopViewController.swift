@@ -12,7 +12,7 @@ import CodableFirebase
 import SVProgressHUD
 import SCLAlertView
 
-class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CustomCelDelegate {
+class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CustomCelDelegate, FilterDelegate {
     
     
     var clothList = [Cloth]()
@@ -26,7 +26,8 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
         
         SVProgressHUD.show()
-        getCloth()
+        let ref = Database.database().reference().child("cloths").child(GENDER).queryOrdered(byChild: "date")
+        getCloth(clothRef: ref)
         getNumCartItems()
         // Do any additional setup after loading the view, typically from a nib.
         shopList.delegate = self
@@ -46,7 +47,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     @IBAction func filterBtnPressed(_ sender: Any) {
-        
+        performSegue(withIdentifier: "filter", sender: self)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -66,6 +67,12 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
+        //return clothList.count
+        if clothList.count == 0 {
+            tableView.setEmptyMessage("There are no matching items for now. Try again later")
+        } else {
+            tableView.restore()
+        }
         return clothList.count
     }
     
@@ -108,8 +115,11 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
     }
     
-    func getCloth(){
-        let clothRef = Database.database().reference().child("cloths").child(GENDER).queryOrdered(byChild: "date")
+    func getCloth(clothRef: DatabaseQuery){
+        
+        clothList.removeAll()
+        shopList.reloadData()
+        
         clothRef.observe(.childAdded){
             snapshot in
             
@@ -124,6 +134,16 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 print(error)
             }
             
+        }
+        
+        clothRef.observe(.value){
+            snapshot in
+            
+            if snapshot.hasChildren(){
+                
+            }else{
+                SVProgressHUD.dismiss()
+            }
         }
     }
     
@@ -158,7 +178,9 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let dataToShare = [image1?.image, "https://ladrope.com/cloth/\(cell.cloth!.clothKey)" ] as [Any]
         
         let activityController = UIActivityViewController(activityItems: dataToShare, applicationActivities: nil)
-        self.present(activityController, animated: true, completion: nil)
+        self.present(activityController, animated: true){
+            updateCoupon()
+        }
     }
     
     func commentBtnPressed(cell: ShopViewCell) {
@@ -204,6 +226,11 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             clothCV.cloth = selectedCloth
         }
         
+        if segue.identifier == "filter" {
+            let FVC = segue.destination as! FilterViewController
+            FVC.delgate = self
+        }
+        
     }
     
     func getNumCartItems() {
@@ -220,6 +247,12 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             }
             
         }
+    }
+    
+    func filter(query: DatabaseQuery) {
+        SVProgressHUD.show()
+        print("filter started")
+        getCloth(clothRef: query)
     }
 
 

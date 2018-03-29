@@ -59,6 +59,7 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
     func loginCallBack(user: User?, error: Error?){
         if(error == nil){
             SVProgressHUD.dismiss()
+            getUser()
             performSegue(withIdentifier: "goHomeFromLogin", sender: self)
         }else{
             SVProgressHUD.dismiss()
@@ -200,6 +201,7 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
             myUser.photoURL = String(describing: user?.photoURL)
             saveUser(user: myUser, uid: user!.uid)
             SVProgressHUD.dismiss()
+            getUser()
             self.performSegue(withIdentifier: "goHomeFromCreateAccount", sender: self)
         }
     }

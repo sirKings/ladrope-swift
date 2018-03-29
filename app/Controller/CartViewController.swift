@@ -16,6 +16,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     var itemArray = [Cloth]()
+    var price: Int?
     
     @IBOutlet weak var discountedTotal: UILabel!
     @IBOutlet weak var total: UILabel!
@@ -30,7 +31,8 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         cartList.dataSource = self
         cartList.register(UINib(nibName: "CartViewCell", bundle: nil), forCellReuseIdentifier: "cartViewCell")
         cartList.separatorStyle = .none
-
+        
+        
         // Do any additional setup after loading the view.
     }
 
@@ -63,6 +65,16 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     @IBAction func placeOrderPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "startPayment", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "startPayment" {
+            let PVC = segue.destination as! PaymentViewController
+            PVC.price = price
+            PVC.cloths = itemArray
+            PVC.sender = true
+        }
     }
     
     func removeItem(cell: CartViewCell) {
@@ -87,11 +99,10 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         guard let value = snapshot.value else { return }
         do {
             let cloth = try FirebaseDecoder().decode(Cloth.self, from: value)
-            print(cloth)
             itemArray.append(cloth)
             SVProgressHUD.dismiss()
             cartList.reloadData()
-            total.text = "Total: NGN\(getTotal()).00"
+            fixPrice()
         } catch let error {
             print(error)
         }
@@ -102,7 +113,37 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         for item in itemArray {
             total = total + item.price
         }
+       
         return total
+    }
+    
+    func fixPrice() {
+        if checkCoupon() {
+            //strike through
+            let attributeString =  NSMutableAttributedString(string: "Total: NGN\(getTotal()).00")
+            attributeString.addAttribute(NSAttributedStringKey.strikethroughStyle, value: 2, range: NSMakeRange(0, attributeString.length))
+            
+            total.attributedText = attributeString
+            
+            discountedTotal.text = "Discounted Price: NGN\(Int(Double(getTotal()) * 0.95)).00"
+            price = Int(Double(getTotal()) * 0.95)
+        }else {
+            total.text = "Total: NGN\(getTotal()).00"
+            discountedTotal.text = ""
+            price = getTotal()
+        }
+        
+    }
+    
+    func checkCoupon() -> Bool{
+        print(currentUser?.coupons)
+        if currentUser?.coupons != nil && currentUser!.coupons! > 0 {
+            print("There is coupon")
+            return true
+        }else {
+            print("there is no coupon")
+            return false
+        }
     }
 
 }

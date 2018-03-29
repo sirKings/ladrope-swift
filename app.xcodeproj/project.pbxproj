@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		46AA668D442F5FBEE9628BEF /* Pods_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69FF400EDFE88E92D2073131 /* Pods_app.framework */; };
+		46AA668D442F5FBEE9628BEF /* Pods_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69FF400EDFE88E92D2073131 /* Pods_app.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		CE315F64205BA3E600B17AAF /* Height.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE315F63205BA3E600B17AAF /* Height.swift */; };
 		CE315F66205BB2AD00B17AAF /* MeasurementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE315F65205BB2AD00B17AAF /* MeasurementViewController.swift */; };
 		CE315F68205BB3C900B17AAF /* EnterMeasurementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE315F67205BB3C900B17AAF /* EnterMeasurementViewController.swift */; };
@@ -18,7 +18,6 @@
 		CE315F72205BF32700B17AAF /* TriangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE315F71205BF32700B17AAF /* TriangleView.swift */; };
 		CE315F74205C289D00B17AAF /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE315F73205C289D00B17AAF /* VideoViewController.swift */; };
 		CE41D3A5205D40D80093D077 /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE41D3A4205D40D80093D077 /* NewsItem.swift */; };
-		CE41D3A7205D496F0093D077 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE41D3A6205D496E0093D077 /* WebViewController.swift */; };
 		CE556F6B205187A8008F2CD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE556F6A205187A8008F2CD4 /* AppDelegate.swift */; };
 		CE556F6D205187A8008F2CD4 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE556F6C205187A8008F2CD4 /* ShopViewController.swift */; };
 		CE556F6F205187A8008F2CD4 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE556F6E205187A8008F2CD4 /* OrderViewController.swift */; };
@@ -52,6 +51,16 @@
 		CE68B284205940F400FF47CE /* ShopViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE68B282205940F400FF47CE /* ShopViewCell.xib */; };
 		CE68B2882059530000FF47CE /* NewsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE68B2862059530000FF47CE /* NewsViewCell.swift */; };
 		CE68B2892059530000FF47CE /* NewsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE68B2872059530000FF47CE /* NewsViewCell.xib */; };
+		CE792A86206C031A0061692C /* CompleteOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE792A85206C03190061692C /* CompleteOrderViewController.swift */; };
+		CE792A88206C033B0061692C /* DeclineOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE792A87206C033B0061692C /* DeclineOrderViewController.swift */; };
+		CE792A8A206D39850061692C /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE792A89206D39840061692C /* FilterViewController.swift */; };
+		CE8D69C9206BCD0200163D6B /* OrderDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8D69C8206BCD0200163D6B /* OrderDetailsViewController.swift */; };
+		CED83423206A6994002117D8 /* OrderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED83421206A6994002117D8 /* OrderViewCell.swift */; };
+		CED83424206A6994002117D8 /* OrderViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CED83422206A6994002117D8 /* OrderViewCell.xib */; };
+		CED83426206A6DA5002117D8 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED83425206A6DA5002117D8 /* Order.swift */; };
+		CED83429206A88C7002117D8 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED83428206A88C7002117D8 /* PaymentViewController.swift */; };
+		CED8342B206AA7E5002117D8 /* PlaceOrders.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED8342A206AA7E5002117D8 /* PlaceOrders.swift */; };
+		CED8342D206B733D002117D8 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED8342C206B733D002117D8 /* DateFormatter.swift */; };
 		CEFE5076205AB1D400530B1C /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE5075205AB1D400530B1C /* CartViewController.swift */; };
 		CEFE507A205AB33000530B1C /* CartViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE5078205AB33000530B1C /* CartViewCell.swift */; };
 		CEFE507B205AB33000530B1C /* CartViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEFE5079205AB33000530B1C /* CartViewCell.xib */; };
@@ -72,7 +81,6 @@
 		CE315F71205BF32700B17AAF /* TriangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleView.swift; sourceTree = "<group>"; };
 		CE315F73205C289D00B17AAF /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		CE41D3A4205D40D80093D077 /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
-		CE41D3A6205D496E0093D077 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		CE556F67205187A8008F2CD4 /* app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE556F6A205187A8008F2CD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE556F6C205187A8008F2CD4 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +116,17 @@
 		CE68B282205940F400FF47CE /* ShopViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopViewCell.xib; sourceTree = "<group>"; };
 		CE68B2862059530000FF47CE /* NewsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewCell.swift; sourceTree = "<group>"; };
 		CE68B2872059530000FF47CE /* NewsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsViewCell.xib; sourceTree = "<group>"; };
+		CE792A85206C03190061692C /* CompleteOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteOrderViewController.swift; sourceTree = "<group>"; };
+		CE792A87206C033B0061692C /* DeclineOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeclineOrderViewController.swift; sourceTree = "<group>"; };
+		CE792A89206D39840061692C /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		CE8D69C8206BCD0200163D6B /* OrderDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailsViewController.swift; sourceTree = "<group>"; };
+		CED83421206A6994002117D8 /* OrderViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewCell.swift; sourceTree = "<group>"; };
+		CED83422206A6994002117D8 /* OrderViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderViewCell.xib; sourceTree = "<group>"; };
+		CED83425206A6DA5002117D8 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		CED83427206A8448002117D8 /* app.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = app.entitlements; sourceTree = "<group>"; };
+		CED83428206A88C7002117D8 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		CED8342A206AA7E5002117D8 /* PlaceOrders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrders.swift; sourceTree = "<group>"; };
+		CED8342C206B733D002117D8 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		CEFE5075205AB1D400530B1C /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		CEFE5078205AB33000530B1C /* CartViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewCell.swift; sourceTree = "<group>"; };
 		CEFE5079205AB33000530B1C /* CartViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartViewCell.xib; sourceTree = "<group>"; };
@@ -155,6 +174,7 @@
 		CE556F69205187A8008F2CD4 /* app */ = {
 			isa = PBXGroup;
 			children = (
+				CED83427206A8448002117D8 /* app.entitlements */,
 				CE66D7092052B0B300CE29D3 /* Utilities */,
 				CE556F8020519171008F2CD4 /* View */,
 				CE556F7F20519164008F2CD4 /* Controller */,
@@ -177,6 +197,7 @@
 				CE68B27E205926D200FF47CE /* Option.swift */,
 				CE315F63205BA3E600B17AAF /* Height.swift */,
 				CE41D3A4205D40D80093D077 /* NewsItem.swift */,
+				CED83425206A6DA5002117D8 /* Order.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -205,7 +226,11 @@
 				CE315F6D205BBD9700B17AAF /* TipsViewController.swift */,
 				CE315F6F205BD97200B17AAF /* SelectTimeViewController.swift */,
 				CE315F73205C289D00B17AAF /* VideoViewController.swift */,
-				CE41D3A6205D496E0093D077 /* WebViewController.swift */,
+				CED83428206A88C7002117D8 /* PaymentViewController.swift */,
+				CE8D69C8206BCD0200163D6B /* OrderDetailsViewController.swift */,
+				CE792A85206C03190061692C /* CompleteOrderViewController.swift */,
+				CE792A87206C033B0061692C /* DeclineOrderViewController.swift */,
+				CE792A89206D39840061692C /* FilterViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -213,6 +238,7 @@
 		CE556F8020519171008F2CD4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CED83420206A696A002117D8 /* ordersCell */,
 				CEFE5077205AB30C00530B1C /* cartCell */,
 				CE68B285205952DC00FF47CE /* newsCell */,
 				CE68B280205940CD00FF47CE /* shopCell */,
@@ -239,6 +265,8 @@
 				CE66D70A2052B0D400CE29D3 /* UserServices.swift */,
 				CE5F65F120568E5100BCE8B2 /* Constants.swift */,
 				CE315F71205BF32700B17AAF /* TriangleView.swift */,
+				CED8342A206AA7E5002117D8 /* PlaceOrders.swift */,
+				CED8342C206B733D002117D8 /* DateFormatter.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -277,6 +305,15 @@
 				CE68B2872059530000FF47CE /* NewsViewCell.xib */,
 			);
 			path = newsCell;
+			sourceTree = "<group>";
+		};
+		CED83420206A696A002117D8 /* ordersCell */ = {
+			isa = PBXGroup;
+			children = (
+				CED83421206A6994002117D8 /* OrderViewCell.swift */,
+				CED83422206A6994002117D8 /* OrderViewCell.xib */,
+			);
+			path = ordersCell;
 			sourceTree = "<group>";
 		};
 		CEFE5077205AB30C00530B1C /* cartCell */ = {
@@ -333,6 +370,14 @@
 					CE556F66205187A8008F2CD4 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -368,6 +413,7 @@
 				CE68B27220581BC900FF47CE /* CommentViewCell.xib in Resources */,
 				CE556F8220519271008F2CD4 /* GoogleService-Info.plist in Resources */,
 				CE556F74205187A8008F2CD4 /* Assets.xcassets in Resources */,
+				CED83424206A6994002117D8 /* OrderViewCell.xib in Resources */,
 				CE68B284205940F400FF47CE /* ShopViewCell.xib in Resources */,
 				CE556F72205187A8008F2CD4 /* Main.storyboard in Resources */,
 			);
@@ -428,6 +474,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Paystack/Paystack.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
@@ -445,6 +492,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Paystack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
@@ -463,14 +511,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE41D3A7205D496F0093D077 /* WebViewController.swift in Sources */,
 				CE5F65F4205694AA00BCE8B2 /* Cloth.swift in Sources */,
+				CED83429206A88C7002117D8 /* PaymentViewController.swift in Sources */,
 				CE66D70B2052B0D400CE29D3 /* UserServices.swift in Sources */,
 				CE68B26B2057DCFE00FF47CE /* ImageCollectionViewCell.swift in Sources */,
 				CE5F65E320567EC300BCE8B2 /* UserViewController.swift in Sources */,
 				CE5F65EF20568BC200BCE8B2 /* SearchViewCell.swift in Sources */,
 				CE68B283205940F400FF47CE /* ShopViewCell.swift in Sources */,
 				CE315F72205BF32700B17AAF /* TriangleView.swift in Sources */,
+				CED8342B206AA7E5002117D8 /* PlaceOrders.swift in Sources */,
 				CEFE507D205ADC2F00530B1C /* EditUserViewController.swift in Sources */,
 				CE315F74205C289D00B17AAF /* VideoViewController.swift in Sources */,
 				CE68B26D2058160F00FF47CE /* CommentViewController.swift in Sources */,
@@ -478,6 +527,7 @@
 				CE68B27120581BC900FF47CE /* CommentViewCell.swift in Sources */,
 				CE5F65E520567ED700BCE8B2 /* ChatViewController.swift in Sources */,
 				CE315F6A205BB3E700B17AAF /* StartMeasurementViewController.swift in Sources */,
+				CE792A86206C031A0061692C /* CompleteOrderViewController.swift in Sources */,
 				CE66D7062052855800CE29D3 /* CreateAccountViewController.swift in Sources */,
 				CE68B2782059224A00FF47CE /* OptionsViewController.swift in Sources */,
 				CE556F6F205187A8008F2CD4 /* OrderViewController.swift in Sources */,
@@ -486,15 +536,21 @@
 				CEFE507A205AB33000530B1C /* CartViewCell.swift in Sources */,
 				CE315F6E205BBD9700B17AAF /* TipsViewController.swift in Sources */,
 				CE315F64205BA3E600B17AAF /* Height.swift in Sources */,
+				CED83426206A6DA5002117D8 /* Order.swift in Sources */,
 				CE556F6B205187A8008F2CD4 /* AppDelegate.swift in Sources */,
 				CE556F6D205187A8008F2CD4 /* ShopViewController.swift in Sources */,
 				CE68B27F205926D200FF47CE /* Option.swift in Sources */,
 				CE41D3A5205D40D80093D077 /* NewsItem.swift in Sources */,
+				CED8342D206B733D002117D8 /* DateFormatter.swift in Sources */,
 				CE66D7042052838900CE29D3 /* LoginViewController.swift in Sources */,
+				CE792A88206C033B0061692C /* DeclineOrderViewController.swift in Sources */,
 				CE315F66205BB2AD00B17AAF /* MeasurementViewController.swift in Sources */,
+				CE8D69C9206BCD0200163D6B /* OrderDetailsViewController.swift in Sources */,
+				CED83423206A6994002117D8 /* OrderViewCell.swift in Sources */,
 				CE315F70205BD97200B17AAF /* SelectTimeViewController.swift in Sources */,
 				CE5F65F62056B32E00BCE8B2 /* ClothViewController.swift in Sources */,
 				CE68B27C2059237F00FF47CE /* OptionsViewCell.swift in Sources */,
+				CE792A8A206D39850061692C /* FilterViewController.swift in Sources */,
 				CE5F65F220568E5100BCE8B2 /* Constants.swift in Sources */,
 				CE68B27420581F6E00FF47CE /* Comment.swift in Sources */,
 				CE68B2882059530000FF47CE /* NewsViewCell.swift in Sources */,
@@ -637,6 +693,7 @@
 			baseConfigurationReference = 89E78B5A38A282EE6768A4EC /* Pods-app.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = app/app.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2637EN8LY;
 				INFOPLIST_FILE = app/Info.plist;
@@ -653,6 +710,7 @@
 			baseConfigurationReference = 89EE724E0212FD4B12A2175C /* Pods-app.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = app/app.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2637EN8LY;
 				INFOPLIST_FILE = app/Info.plist;

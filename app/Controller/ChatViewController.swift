@@ -28,6 +28,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         newsList.register(UINib(nibName: "NewsViewCell", bundle: nil), forCellReuseIdentifier: "newsViewCell")
         
         newsList.separatorStyle = .none
+        newsList.rowHeight = 300
         
         SVProgressHUD.show()
         getNews()
@@ -48,11 +49,11 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
-        if segue.identifier == "goToWeb" {
-            let wVC = segue.destination as! WebViewController
-            
-            wVC.link = link!
-        }
+//        if segue.identifier == "goToWeb" {
+//            let wVC = segue.destination as! WebViewController
+//            
+//            wVC.link = link!
+//        }
     }
  
     
@@ -75,7 +76,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         link = newsArray[indexPath.row].link!
-        performSegue(withIdentifier: "goToWeb", sender: self)
+        //print(link)
+        //performSegue(withIdentifier: "goToWeb", sender: self)
     }
     
     
@@ -88,7 +90,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             guard let value = snapshot.value else { return }
             do {
                 let news = try FirebaseDecoder().decode(NewsItem.self, from: value)
-                print(news)
+                //print(news)
                 self.newsArray.append(news)
                 SVProgressHUD.dismiss()
                 self.newsList.reloadData()
@@ -98,10 +100,31 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
+//    func seeMore(cell: NewsViewCell) {
+//        link = cell.link
+//        print(link)
+//        performSegue(withIdentifier: "goToWeb", sender: self)
+//
+//    }
+    
     func seeMore(cell: NewsViewCell) {
-        performSegue(withIdentifier: "goToWeb", sender: self)
-        link = cell.link
-        print(link)
+        let mywebViewController = UIViewController()
+        let webView = UIWebView(frame: mywebViewController.view.bounds)
+        
+        let url = URL(string: cell.link!)
+        let request = URLRequest(url: url!)
+        
+        webView.loadRequest(request) // url from the row a user taps
+        let navController = UINavigationController(rootViewController: mywebViewController)
+        mywebViewController.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dimiss))
+        mywebViewController.navigationItem.rightBarButtonItem?.tintColor = UIColor(red: 0, green: 74/255, blue: 0, alpha: 1)
+        mywebViewController.view = webView
+        present(navController, animated: true, completion: nil)
+
+    }
+    
+    @objc func dimiss(){
+        self.dismiss(animated: true, completion: nil)
     }
 
 }

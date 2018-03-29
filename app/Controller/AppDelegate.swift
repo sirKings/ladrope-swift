@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import GoogleSignIn
 import IQKeyboardManagerSwift
+import Paystack
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate{
@@ -28,6 +29,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         //GIDSignIn.sharedInstance().delegate = self
         
         IQKeyboardManager.sharedManager().enable = true
+        
+        //configure paystack
+        Paystack.setDefaultPublicKey("pk_live_4a0123c1a2d1b80e444981f427d7d70559d15d0f")
         
         //configure tab bar
         UITabBar.appearance().tintColor = UIColor( red: CGFloat(0), green: CGFloat(74/255.0), blue: CGFloat(0), alpha: CGFloat(1.0) )

@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import CodableFirebase
 
 class MainViewController: UIViewController {
 
@@ -19,6 +20,7 @@ class MainViewController: UIViewController {
             (auth, user) in
             if user != nil {
                 self.performSegueForMe(identifier: "goHome")
+                getUser()
             }else{
                 
             }
@@ -42,4 +44,5 @@ class MainViewController: UIViewController {
     @IBAction func Login(_ sender: UIButton) {
         performSegue(withIdentifier: "goToLogin", sender: self)
     }
+    
 }

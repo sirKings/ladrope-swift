@@ -10,7 +10,7 @@ import Foundation
 struct Cloth: Codable {
     let name: String
     let clothKey: String
-    //let cost: Any
+    let cost: Int
     let gender: String
     let image1: String
     let image2: String

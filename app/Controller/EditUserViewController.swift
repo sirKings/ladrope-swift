@@ -130,6 +130,7 @@ class EditUserViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                             if err == nil {
                                 SVProgressHUD.dismiss()
                                 SCLAlertView().showSuccess("Success", subTitle: "Updates saved")
+                                checkAndSubmitPendingOrders()
                             }
                         }
                 }else{

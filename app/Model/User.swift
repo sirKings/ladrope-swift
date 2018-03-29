@@ -15,7 +15,7 @@ struct MyUser: Codable {
     var address: String?
     var coupons: Int?
     var gender: String?
-    //var height: Any?
+    var height: Dictionary<String, String>?
     var phone: String?
     //var size: Any?
 }
